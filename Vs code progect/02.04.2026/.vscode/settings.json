@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd \"c:\\\\Users\\\\nazar\\\\OneDrive\\\\Документи\\\\Vs code\\\\02\\.04\\.2026\"; python -m django startproject config \\.$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

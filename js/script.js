@@ -1,0 +1,16 @@
+console.log( Boolean(-1));
+console.log( Boolean(0));
+console.log( Boolean(2));
+console.log(5**2);
+console.log(-2);
+console.log(-100 / 10);
+console.log(1000 - 2);
+let um = 15; 
+um +=2;
+console.log(um);
+um--;
+console.log(um);
+um--;
+console.log(um);
+um++;
+console.log(um);

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My computer</title>
+</head>
+<body>
+   <h1>Мій компютер</h1>
+   <h2>Головні комплектуючі:</h2>
+   <ul>
+    <li><b> Cpu :Ryzen 5 5600 4.4 GHz -> 4.6 GHz</b>
+</li>
+    <li> <b> Gpu: Nvidia Rtx 2060 Super </b>
+</li>
+    <li> <b> Ram: Corsair vengeance pro rgb, clock 3733 cl 14, 14, 14 gen mode 1:1:1</b>
+</li>
+    <li>
+        <b> Cpu z screenshot:</b> <img src="/mnt/hdd/pythone_p/image.png" />
+</li>
+   </ul>
+
+   <h2> Головін налаштуваня ram в bios: </h2>
+   <table border="1">
+    
+    <tr>
+        <th> tCL (CAS Latency) -</th> <td>14 </td> 
+    </tr> 
+    <tr>
+        <th> tRCDWR / tRCDRD -</th> <td> 14</td> 
+    </tr>
+    <tr>
+        <th> tRP (Row Precharge) -</th> <td> 14</td>
+    </tr>
+    <tr>
+        <th> tRAS (Active to Precharge) -</th> <td> 30</td> 
+    </tr>
+    <tr>
+        <th> tRFC -</th> <td> 320</td> 
+    </tr>
+   </table>
+   
+   <!-- мій калькулятор частот -->
+    <h2> Калькулятор частот:</h2>
+   <form>
+    
+    <label for="GHz"><b>Бажана частота:</b>
+    <select id="Cpu" name="Cpu">
+        <option value="5.0 GHz">  5.0 GHz  </option>
+        <option value="4.9 GHz">  4.9 GHz  </option>
+        <option value="4.8 GHz">  4.8 GHz  </option>
+        <option value="4.7 GHz">  4.7 GHz  </option>
+        <option value="4.6 GHz">  4.6 GHz  </option>
+        <option value="4.5 GHz">  4.5 GHz  </option>
+        <option value="4.4 GHz">  4.4 GHz  </option>
+        <option value="4.3 GHz">  4.3 GHz  </option>
+        <option value="4.2 GHz">  4.2 GHz  </option>
+        <option value="4.1 GHz">  4.1 GHz  </option>
+        <option value="4.0 GHz">  4.0 GHz  </option>
+        <option value="3.9 GHz">  3.9 GHz  </option>
+        <option value="3.8 GHz">  3.8 GHz  </option>
+        <option value="3.6 GHz">  3.6 GHz  </option>
+        <option value="3.5 GHz">  3.5 GHz  </option>
+        <option value="3.4 GHz">  3.4 GHz  </option>
+        <option value="3.3 GHz">  3.3 GHz  </option>
+        <option value="3.2 GHz">  3.2 GHz  </option>
+        <option value="3.1 GHz">  3.1 GHz  </option>
+        <option value="3.0 GHz">  3.0 GHz  </option>
+        <option value="2.9 GHz">  2.9 GHz  </option>
+    </select>
+    </label>
+
+    <label for="brand"><b>Amd or Intel?</b>
+    <select id="brand" name="brand">
+        <option value="Amd"> <b>Amd</b></option>
+        <option value="Intel"> Intel</option>
+
+    </select>
+    </label>
+    
+
+
+    <button type="button"> Розрахувати </button> 
+       
+
+   </form>
+
+
+   
+   
+   
+   
+          
+
+
+
+</body>
+</html>

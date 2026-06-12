@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block head %} 
+<title>Specifications My Pc</title>
+
+
+{% endblock %}
+
+
+{% block body %}
+<h1>Мій компютер</h1>
+   <h2>Головні комплектуючі:</h2>
+   <ul>
+    <li><b> Cpu :Ryzen 5 5600 4.4 GHz -> 4.6 GHz</b>
+</li>
+    <li> <b> Gpu: Nvidia Rtx 2060 Super </b>
+</li>
+    <li> <b> Ram: Corsair vengeance pro rgb, clock 3733 cl 14, 14, 14 gen mode 1:1:1</b>
+</li>
+    
+   </ul>
+
+   <h2> Головін налаштуваня ram в bios: </h2>
+   <table border="1">
+    
+    <tr>
+        <th> tCL (CAS Latency) -</th> <td>14 </td> 
+    </tr> 
+    <tr>
+        <th> tRCDWR / tRCDRD -</th> <td> 14</td> 
+    </tr>
+    <tr>
+        <th> tRP (Row Precharge) -</th> <td> 14</td>
+    </tr>
+    <tr>
+        <th> tRAS (Active to Precharge) -</th> <td> 30</td> 
+    </tr>
+    <tr>
+        <th> tRFC -</th> <td> 320</td> 
+    </tr>
+   </table>
+{% endblock %}
+
+

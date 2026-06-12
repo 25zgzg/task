@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Timetable - {{ class_obj.name }}</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background: #f7f7f7; }
+    .subject { font-weight: 600; }
+    .teacher { font-size: 0.9em; color: #444; }
+  </style>
+</head>
+<body>
+  <h1>Розклад для класу {{ class_obj.name }}</h1>
+  <p>
+    <a class="btn btn-sm btn-outline-secondary" href="{% url 'school:classes_list' %}">Back to classes</a>
+    <a class="btn btn-sm btn-outline-success" href="{% url 'school:schedule_new' class_obj.id %}">Add lesson</a>
+  </p>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Hour / Day</th>
+        {% for day in days %}
+        <th>{{ day }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <th>{{ row.hour }}</th>
+        {% for cell in row.cells %}
+        <td>
+          {% if cell %}
+            <div class="subject">{{ cell.subject.name }}</div>
+            <div class="teacher">{{ cell.teacher.first_name }} {{ cell.teacher.last_name }}</div>
+            <div class="mt-2">
+              <a class="btn btn-sm btn-outline-primary" href="{% url 'school:schedule_edit' cell.id %}">Edit</a>
+              <a class="btn btn-sm btn-outline-danger" href="{% url 'school:schedule_delete' cell.id %}">Delete</a>
+            </div>
+          {% else %}
+            —
+          {% endif %}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</body>
+</html>

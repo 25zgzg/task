@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ task.title }}</h2>
+  <p><strong>Статус:</strong> {{ task.get_status_display }} | <strong>Пріоритет:</strong> {{ task.get_priority_display }}</p>
+  <p><strong>Дедлайн:</strong> {{ task.due_date }}</p>
+  <p>{{ task.description }}</p>
+  <hr>
+  <h3>Коментарі</h3>
+  <ul>
+    {% for comment in task.comments.all %}
+      <li>
+        <strong>{{ comment.user }}:</strong> {{ comment.content }} 
+        {% if comment.media %}<a href="{{ comment.media.url }}">Файл</a>{% endif %}
+        <a href="{% url 'tasks:comment_edit' comment.pk %}" class="btn btn-sm btn-light">Редагувати</a>
+        <a href="{% url 'tasks:comment_delete' comment.pk %}" class="btn btn-sm btn-light">Видалити</a>
+      </li>
+    {% empty %}
+      <li>Коментарів немає.</li>
+    {% endfor %}
+  </ul>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit" class="btn btn-success">Додати коментар</button>
+  </form>
+  <div class="mt-3">
+    <a href="{% url 'tasks:task_list' %}" class="btn btn-secondary">Назад до списку</a>
+  </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-commons": {
+      "version": "1.0.3",
+      "installedAt": 1780948872796,
+      "registry": "https://clawhub.ai"
+    },
+    "ddg-web-search": {
+      "version": "1.0.0",
+      "installedAt": 1780950454544,
+      "registry": "https://clawhub.ai"
+    },
+    "awwwards-design": {
+      "version": "1.0.0",
+      "installedAt": 1780950634432,
+      "registry": "https://clawhub.ai"
+    }
+  }
+}

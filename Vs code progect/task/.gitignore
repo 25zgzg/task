@@ -5,3 +5,12 @@ Vs code progect/booking_system/
 # virtual envs
 .venv/
 */.venv/
+
+# virtual envs
+.venv/
+*/.venv/
+
+# Python ignores
+__pycache__/
+*.pyc
+db.sqlite3
